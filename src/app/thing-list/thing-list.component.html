@@ -1,0 +1,25 @@
+
+<button (click)="onTestClick()">Don't click me</button> {{isThing}}
+
+<table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th></th>
+      <th>What</th>
+      <th>Where</th>
+      <th><input type="text" [(ngModel)]="searchInput"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let t of things | filterThing: searchInput">
+      <td> {{ t.id }} </td> 
+      <td> {{ t.what }} </td>
+      <td> {{ t.where }} </td>
+      
+      <td><button class="btn btn-danger" (click)="onDeleteThing(t._id)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
+  
+
+

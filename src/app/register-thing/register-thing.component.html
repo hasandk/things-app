@@ -1,0 +1,18 @@
+
+<form [formGroup]="thingForm" class="example-form" (ngSubmit)="onThingSubmit()">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="What" formControlName="what">
+      <mat-error>
+        Please provide a what
+      </mat-error>
+    </mat-form-field> 
+  
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Where" formControlName="where">
+      <mat-error>
+        Please provide a where
+      </mat-error>
+    </mat-form-field>  
+  
+    <button mat-raised-button color="primary" id="registerThing" [disabled]="isLoading">Register Thing</button>
+  </form>
