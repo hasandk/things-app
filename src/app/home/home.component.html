@@ -1,13 +1,11 @@
 
-<div class="container">
-    <div class="starter-template">
-      <h1>Welcome to my webpage</h1>
-      <p class="lead">This web app helps you to remmber things</p>
+<div class="starter-template">
+  <h1>Welcome to my webpage</h1>
+  <p class="lead">This web app helps you to remmber things</p>
+  <button mat-raised-button color="primary" [routerLink]="['/login']" >Login</button> 
+  OR
+  <button mat-raised-button color="primary" [routerLink]="['/register']" >Register</button> 
+</div>
 
+  <router-outlet></router-outlet>
 
-      <a href="http://localhost:4200/login">Login</a> <p>here    OR    </p> <a href="http://localhost:4200/register">Register</a><p>here</p>
-
-    </div>
-  </div>
-
-<router-outlet></router-outlet>

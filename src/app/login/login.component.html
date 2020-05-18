@@ -8,7 +8,7 @@
       </mat-error>
       
       <mat-error *ngIf="loginForm.controls.username.hasError('minlength')">
-        Username must be at least 3 characters
+        Username must be at least 5 characters
       </mat-error>
 
     </mat-form-field> 
@@ -17,5 +17,8 @@
       <input matInput placeholder="Password" type="password" formControlName="password" id="password-input">
     </mat-form-field>
 
-    <button mat-raised-button color="primary" id="login-button">Login</button>
+    <button mat-raised-button color="primary" id="login-button">Login</button> OR
+    <button mat-raised-button color="primary" [routerLink]="['/home']" >Cancel</button> 
   </form>
+
+  

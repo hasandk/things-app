@@ -4,7 +4,6 @@ import { thingsReducer } from './thingReducer';
 import { Thing } from '../entities/thing';
 
 export class ThingState {
-  isThing: boolean;
   things: Thing[];
   isLoading: boolean;
 }

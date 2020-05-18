@@ -9,9 +9,7 @@ import { Router } from '@angular/router';
 export class ThingActions{
   
         constructor(private ngRedux: NgRedux<AppState>, private apiService: ApiService, private router: Router /* Autowired */) {} 
-
-        static SET_TYPE: string = 'SET_TYPE'; 
-        static MyAction: string = 'MY_ACTION'; 
+ 
         static ADD_THING: string = 'ADD_THING'; 
         static GET_THINGS: string = 'GET_THINGS';
         static DELETE_THING: string = 'DELETE_THING'; 
@@ -49,20 +47,6 @@ export class ThingActions{
             type: ThingActions.DELETE_THING,
             payload: id
           });
-        }
-
-        callMyAction(isThing: boolean): void {
-          this.ngRedux.dispatch({
-            type: ThingActions.MyAction,
-            payload: isThing
-          });
-        }
-
-        setType(isThing: boolean): void {
-          this.ngRedux.dispatch({
-            type: ThingActions.SET_TYPE,
-            payload: isThing
-          });
-        }
+        }     
 }
 

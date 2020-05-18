@@ -4,7 +4,7 @@ import { ThingState } from './store';
 import { Thing } from '../entities/thing';
 
 
-const INITIAL_STATE: ThingState = {isThing: false, things: [], isLoading: false };
+const INITIAL_STATE: ThingState = {things: [], isLoading: false };
 
 export function thingsReducer(state: ThingState = INITIAL_STATE, action: any) {
     switch (action.type) {
@@ -16,11 +16,8 @@ export function thingsReducer(state: ThingState = INITIAL_STATE, action: any) {
             const newThings = [...state.things, action.payload]; // Javascript spread operator
             return tassign(state, { things: newThings, isLoading: false }); 
         case ThingActions.DELETE_THING:
-            const afterDeleteThings: Thing[] = 
-            state.things.filter(thing => thing._id !== action.payload);
+            const afterDeleteThings: Thing[] = state.things.filter(thing => thing._id !== action.payload);
             return tassign(state, { things: afterDeleteThings });
-        case ThingActions.SET_TYPE:
-            return tassign(state, { isThing: action.payload });
         default:
             return state;
     }

@@ -10,7 +10,7 @@ import { Thing } from '../entities/thing';
   styleUrls: ['./thing-list.component.scss']
 })
 export class ThingListComponent implements OnInit {
-  private isThing: boolean;
+  
   private things: Thing[];
 
   constructor(private thingActions: ThingActions,
@@ -18,7 +18,6 @@ export class ThingListComponent implements OnInit {
 
   ngOnInit() {
     this.ngRedux.select(x => x.things).subscribe((state) => {
-      this.isThing = state.isThing;
       this.things = state.things;
     });
   }
@@ -27,10 +26,5 @@ export class ThingListComponent implements OnInit {
     this.thingActions.deleteThing(id);
   }
   
-
-  onTestClick(): void {
-    // dispatch action by calling an action creator.
-    this.thingActions.setType(true);
-  }
 
 }
