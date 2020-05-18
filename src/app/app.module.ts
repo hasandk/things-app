@@ -9,6 +9,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HomeComponent } from './home/home.component';
@@ -41,7 +42,7 @@ import { FilterThing } from './thing-list/thing.filter';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatInputModule, MatFormFieldModule, MatButtonModule, MatToolbarModule, MatCardModule,
+    MatInputModule, MatFormFieldModule, MatButtonModule, MatToolbarModule, MatCardModule, MatProgressBarModule,
     ReactiveFormsModule,
     NgReduxModule,
     NgReduxRouterModule.forRoot(),

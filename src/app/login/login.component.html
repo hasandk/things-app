@@ -1,5 +1,8 @@
  
   <form [formGroup]="loginForm" class="example-form" (ngSubmit)="onLoginClick()">
+
+    <h1>Udfyld Login info</h1>
+    <br><br><br>
     <mat-form-field class="example-full-width">
       <input matInput placeholder="Login" formControlName="username" id="username-input">
       
@@ -18,4 +21,5 @@
     </mat-form-field>
 
     <button mat-raised-button color="primary" id="login-button">Login</button>
+
   </form>

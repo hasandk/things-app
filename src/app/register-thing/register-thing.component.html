@@ -1,16 +1,18 @@
 
 <form [formGroup]="thingForm" class="example-form" (ngSubmit)="onThingSubmit()">
+
+  <h2>Register</h2>
     <mat-form-field class="example-full-width">
-      <input matInput placeholder="What" formControlName="what">
+      <input matInput placeholder="What" id="what-input" formControlName="what">
       <mat-error>
-        Please provide a what
+        Please provide a what you wants to be saved !!
       </mat-error>
     </mat-form-field> 
   
     <mat-form-field class="example-full-width">
-      <input matInput placeholder="Where" formControlName="where">
+      <input matInput placeholder="Where" id="where-input" formControlName="where">
       <mat-error>
-        Please provide a where
+        Please Specify, where you wants to save it !!
       </mat-error>
     </mat-form-field>  
   
